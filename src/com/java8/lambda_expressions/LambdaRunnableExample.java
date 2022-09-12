@@ -34,7 +34,7 @@ public class LambdaRunnableExample {
         new Thread(runnableLambdaMultiToSingleStatement).start();
 
 
-        // With passing reference of runnable to thread.
+        // Without passing reference of runnable to thread.
         new Thread(() -> System.out.println("Runnable Implementation!!")).start();
 
         // Prior to Java 8

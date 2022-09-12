@@ -38,3 +38,27 @@ objective.
 3) Lambdas are not tied to any class like a regular method. 
 4) Lambda can also be assigned to variable and passed around.
 5) Lambda is mainly used to implement Functional Interfaces (SAM: Single Abstract Method).
+
+### Functional Interfaces
+1) Functional interface is an interface that has exactly one abstract method.
+2) @FunctionalInterface is an annotation introduced in java 8. And all the interfaces which has one abstract method are annotated with @FunctionalInterface. 
+3) This is an optional annotation, but it does validate the interfaces that are annotated with this @FunctionalInterface to make sure that the interfaces are not breaking the contract meaning it mandates the interface to have only one abstract method.
+4) New functional interfaces in Java 8, with their extensions:
+
+   • Consumer – BiConsumer
+   
+   • Predicate - BiPredicate
+   
+   • Function – BiFunction, UnaryOperator, BinaryOperator
+
+   • Supplier
+5) All these interfaces are present in java.util.function package.
+
+#### Consumer Functional Interface
+It has one method called "accept with return type as void", which takes one input and works on it. It has a default function "after" which is sequential call to the accept function.
+If performing this operation throws an exception, the after operation will not be performed.
+
+Params: after – the operation to perform after this operation
+
+Returns: a composed Consumer that performs in sequence this operation followed by the after operation.
+
