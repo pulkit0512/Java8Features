@@ -55,10 +55,16 @@ objective.
 5) All these interfaces are present in java.util.function package.
 
 #### Consumer Functional Interface
-It has one method called "accept with return type as void", which takes one input and works on it. It has a default function "after" which is sequential call to the accept function.
+It has one method called "accept with return type as void", which takes one input and works on it. It has a default function "andThen" which is sequential call to the accept function.
 If performing this operation throws an exception, the after operation will not be performed.
 
 Params: after – the operation to perform after this operation
 
 Returns: a composed Consumer that performs in sequence this operation followed by the after operation.
 
+#### Bi Consumer Functional Interface
+Represents an operation that accepts two input arguments and returns no result. This is the two-arity specialization of Consumer.
+
+If we have two variables and both can be combined, then instead of creating to separate consumers for both variables better create one BiConsumer.
+
+If there is value to have separate consumers for each, we can use that too. No performance benefits of BiConsumer over Consumer.
