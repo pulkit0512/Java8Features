@@ -15,7 +15,7 @@
 3) This style of programming lists the step by step of instructions on how
 to achieve an objective. 
 4) We write the code on what needs to be done in each step. 
-5) Imperative style is used with classic Object Oriented Programming.
+5) Imperative style is used with classic Object-Oriented Programming.
 
 **Declarative Style of Programming**
 1) Focuses on what is the result you want. 
@@ -68,3 +68,14 @@ Represents an operation that accepts two input arguments and returns no result. 
 If we have two variables and both can be combined, then instead of creating to separate consumers for both variables better create one BiConsumer.
 
 If there is value to have separate consumers for each, we can use that too. No performance benefits of BiConsumer over Consumer.
+
+#### Predicate Functional Interface
+It has a single abstract method called "test", which accepts an input, perform some operation and returns boolean.
+
+It has 3 default functions: And, Or, Negate. These are used to perform logical boolean operations.
+
+Also, it has 2 static functions: isEqual and not.
+
+#### Bi Predicate Functional Interface
+Represents a predicate (boolean-valued function) of two arguments. This is the two-arity specialization of Predicate.
+Evaluates the input and returns boolean based on the input arguments matching the predicate conditions.
