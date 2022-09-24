@@ -99,5 +99,17 @@ This is a functional interface whose functional method is "apply(Object, Object)
 It has one default method "andThen". It accepts a Function as a parameter, i.e. accepts output of caller function as
 input and performs operation on it and returns the required output.
 
+#### Unary Operator Functional Interface
+It extends Function Functional Interface.
+
+Since we have Function Functional Interface, then in case we have same input and output type then we can use Unary
+Operator Functional Interface instead of a Function.
+
+#### Binary Operator Functional Interface
+It extends BiFunction Functional Interface.
+
+Since we have BiFunction Functional Interface, then in case we have same inputs and output type then we can use Binary
+Operator Functional Interface instead of a BiFunction.
+
 ### Current VS Preferred Functional Interface
 ![img.png](img.png)
