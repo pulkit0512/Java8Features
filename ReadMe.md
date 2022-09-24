@@ -79,3 +79,14 @@ Also, it has 2 static functions: isEqual and not.
 #### Bi Predicate Functional Interface
 Represents a predicate (boolean-valued function) of two arguments. This is the two-arity specialization of Predicate.
 Evaluates the input and returns boolean based on the input arguments matching the predicate conditions.
+
+#### Function Functional Interface
+Function in Java is nothing but a method in a class.
+
+So using function interface, we can implement a functionality as like we call a method in Java and assign that functionality to a variable.
+
+Really new concept, never possible before JAVA 8.
+
+It has one abstract method called "apply", It takes an input and applies this function to that input.
+
+It has two default methods "compose" and "andThen".

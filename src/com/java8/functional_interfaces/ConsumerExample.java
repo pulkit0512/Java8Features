@@ -5,6 +5,7 @@ import com.java8.data.StudentDatabase;
 
 import java.util.List;
 import java.util.function.Consumer;
+import java.util.function.IntConsumer;
 
 public class ConsumerExample {
     static Consumer<String> consumer1 = str -> System.out.println(str.toUpperCase());
@@ -12,11 +13,16 @@ public class ConsumerExample {
     static Consumer<Student> consumer3 = student -> System.out.print(student.getName());
     static Consumer<Student> consumer4 = student -> System.out.println(student.getActivities());
 
+    static IntConsumer intConsumer = i -> System.out.println("Result of Primitive Int Consumer: " + i*i);
+
     static List<Student> studentList = StudentDatabase.getAllStudents();
 
     public static void main(String[] args) {
 
         consumer1.accept("Hello Consumer Interface in Java 8!!");
+
+        // Primitive Consumer Example
+        intConsumer.accept(4);
 
         //Consumer2
         printStudent();

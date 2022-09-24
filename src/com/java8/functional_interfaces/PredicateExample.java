@@ -14,12 +14,13 @@ public class PredicateExample {
 
     // If we have predefined existing java objects, java.util.functional package have specific functional classes.
     // We can use them directly.
+    // Primitive Predicate Example
     static IntPredicate p = i -> i%3==0;
 
     public static void main(String[] args) {
-        System.out.println(p.test(4));
+        System.out.println("Primitive Int Predicate Result: " + p.test(4));
 
-        System.out.println(p.test(9));
+        System.out.println("Primitive Int Predicate Result: " + p.test(9));
 
         predicateAnd();
         predicateOr();
