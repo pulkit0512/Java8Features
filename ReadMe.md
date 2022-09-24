@@ -116,5 +116,9 @@ Opposite of Consumer Functional Interface. Takes on input and returns an output 
 
 It has one abstract method called "get".
 
+
+### Primitive Functional Interfaces
+![img_1.png](primitiveFunctionalInterfaces.png)
+
 ### Current VS Preferred Functional Interface
 ![img.png](img.png)
