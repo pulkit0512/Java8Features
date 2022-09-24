@@ -111,5 +111,10 @@ It extends BiFunction Functional Interface.
 Since we have BiFunction Functional Interface, then in case we have same inputs and output type then we can use Binary
 Operator Functional Interface instead of a BiFunction.
 
+#### Supplier Functional Interface
+Opposite of Consumer Functional Interface. Takes on input and returns an output to the caller.
+
+It has one abstract method called "get".
+
 ### Current VS Preferred Functional Interface
 ![img.png](img.png)
