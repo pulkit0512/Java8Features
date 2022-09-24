@@ -90,3 +90,14 @@ Really new concept, never possible before JAVA 8.
 It has one abstract method called "apply", It takes an input and applies this function to that input.
 
 It has two default methods "compose" and "andThen".
+
+#### Bi Function Functional Interface
+Represents a function that accepts two arguments and produces a result. This is the two-arity specialization of Function.
+
+This is a functional interface whose functional method is "apply(Object, Object)".
+
+It has one default method "andThen". It accepts a Function as a parameter, i.e. accepts output of caller function as
+input and performs operation on it and returns the required output.
+
+### Current VS Preferred Functional Interface
+![img.png](img.png)
