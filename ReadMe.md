@@ -257,3 +257,6 @@ invoked until the terminal operation invokes.**
 ## Collections VS Streams
 ![img_1.png](CollectionsVsStreams1.png)
 ![img_2.png](CollectionsVsStreams2.png)
+
+### Stream API: map()
+Converts/Transforms one type of stream into another. It is different from Map in collections framework.
