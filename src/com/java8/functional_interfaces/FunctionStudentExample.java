@@ -23,7 +23,7 @@ public class FunctionStudentExample {
     static Function<List<Student>, Map<String, Double>> studentFunctionWithPredicate = (students -> {
         Map<String, Double> studentMap = new HashMap<>();
         students.forEach(student -> {
-            if(PredicateStudentExample.p1.test(student)) {
+            if(PredicateStudentExample.gradeLevelPredicate.test(student)) {
                 studentMap.put(student.getName(), student.getGpa());
             }
         });

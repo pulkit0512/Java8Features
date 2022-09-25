@@ -8,8 +8,8 @@ import java.util.function.Predicate;
 
 public class PredicateStudentExample {
 
-    static Predicate<Student> p1 = s -> s.getGradeLevel()>=3;
-    static Predicate<Student> p2 = s -> s.getGpa()>=3.9;
+    public static Predicate<Student> gradeLevelPredicate = s -> s.getGradeLevel()>=3;
+    public static Predicate<Student> gpaPredicate = s -> s.getGpa()>=3.9;
     static List<Student> studentList = StudentDatabase.getAllStudents();
 
     public static void main(String[] args) {
@@ -30,7 +30,7 @@ public class PredicateStudentExample {
     public static void filterStudentsByGradeLevel() {
         System.out.println("filterStudentsByGradeLevel");
         studentList.forEach(student -> {
-            if(p1.test(student)){
+            if(gradeLevelPredicate.test(student)){
                 System.out.println(student);
             }
         });
@@ -39,7 +39,7 @@ public class PredicateStudentExample {
     public static void filterStudentsByGpa() {
         System.out.println("filterStudentsByGpa");
         studentList.forEach(student -> {
-            if(p2.test(student)){
+            if(gpaPredicate.test(student)){
                 System.out.println(student);
             }
         });
@@ -50,7 +50,7 @@ public class PredicateStudentExample {
         System.out.println("filterStudents by AND condition");
         studentList.forEach(student -> {
             //If we want both conditions to meet
-            if(p1.and(p2).test(student)){
+            if(gradeLevelPredicate.and(gpaPredicate).test(student)){
                 System.out.println(student);
             }
         });
@@ -58,7 +58,7 @@ public class PredicateStudentExample {
         System.out.println("filterStudents by OR condition");
         studentList.forEach(student -> {
             //If we want any of the conditions to meet
-            if(p1.or(p2).test(student)){
+            if(gradeLevelPredicate.or(gpaPredicate).test(student)){
                 System.out.println(student);
             }
         });
@@ -66,7 +66,7 @@ public class PredicateStudentExample {
         System.out.println("filterStudents by NEGATE condition");
         studentList.forEach(student -> {
             //If we want none of the conditions to meet
-            if(p1.or(p2).negate().test(student)){
+            if(gradeLevelPredicate.or(gpaPredicate).negate().test(student)){
                 System.out.println(student);
             }
         });

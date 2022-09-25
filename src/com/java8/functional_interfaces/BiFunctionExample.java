@@ -32,9 +32,9 @@ public class BiFunctionExample {
     public static void main(String[] args) {
         List<Student> studentList = StudentDatabase.getAllStudents();
         System.out.println("Result of BiFunction which takes predicate as input variable: "
-                + biFunction.apply(studentList, PredicateStudentExample.p1));
+                + biFunction.apply(studentList, PredicateStudentExample.gradeLevelPredicate));
 
         System.out.println("Result of BiFunction with other predicate if requirement changes with Function Chaining: "
-                + biFunction.andThen(functionSquare).apply(studentList, PredicateStudentExample.p2));
+                + biFunction.andThen(functionSquare).apply(studentList, PredicateStudentExample.gpaPredicate));
     }
 }
