@@ -122,3 +122,45 @@ It has one abstract method called "get".
 
 ### Current VS Preferred Functional Interface
 ![img.png](img.png)
+
+## Method Reference
+Introduced as part of Java 8 and its purpose is to simplify the implementation of Functional Interfaces.
+
+We have achieved it using Lambda, it helped us move away from creating anonymous inner classes.
+But Method Reference is used to simplify the lambda expression itself.
+
+Method Reference is shortcut of writing Lambda Expressions.
+
+#### Syntax of method reference
+ClassName::instance-methodName
+
+ClassName::static-methodName
+
+Instance::methodName
+
+#### Where to use method reference
+Lambda expressions referring to a method directly.
+
+Using Lambda:
+Function<String,String> toUpperCaseLambda = (s)->s.toUpperCase();
+
+Using Method Reference, it is simpler and more readable code:
+Function<String,String> toUpperCaseMethodReference = String::toUpperCase;
+
+#### Where better not to use method reference
+Predicate<Student> predicateUsingLambda = (s) -> s.getGradeLevel()>=3;
+
+Here, we have our own logic and no method is directly referred. So it's difficult to write method reference in such use cases.
+
+## Constructor Reference
+Introduced in Java 8.
+
+Syntax:  Classname::new
+
+We can only use Constructor Reference in context of Functional Interfaces
+
+Example: Supplier<Student> studentSupplier = Student::new;
+
+This returns a new Student object whenever Supplier get method is called. Exception is Student class should have default constructor only.
+
+Invalid: Student student = Student::new; // compilation issue

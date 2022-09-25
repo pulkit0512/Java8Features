@@ -2,8 +2,13 @@ package com.java8.data;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.function.Supplier;
 
 public class StudentDatabase {
+
+    // Supplier to get a student object
+    public static final Supplier<Student> studentSupplier = () ->
+            new Student("Jenny",2,3.8,"female", Arrays.asList("swimming", "gymnastics","soccer"));
 
     private StudentDatabase() {
 
