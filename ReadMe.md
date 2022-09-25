@@ -164,3 +164,36 @@ Example: Supplier<Student> studentSupplier = Student::new;
 This returns a new Student object whenever Supplier get method is called. Exception is Student class should have default constructor only.
 
 Invalid: Student student = Student::new; // compilation issue
+
+## Lambdas and Local Variables
+###What is a Local variable ?
+Any variable that is declared inside a method is called a local variable.
+
+Lambdas have some restrictions on using local variables:
+
+• Not allowed to use the same the local variable name as lambda parameters or inside the lambda body.
+
+• Not allowed re-assign a value to a local variable. No restrictions on instance/class variables.
+
+## Effectively Final
+Lambdas are allowed to use local variables but not allowed to modify it even though they are not declared final.
+This concept is called Effectively Final. 
+
+Not allowed to modify the value inside the lambda:
+
+int value =4; // local variable
+
+Consumer<Integer> c1 = (a) -> {
+
+//value=6; //reassigning not allowed
+
+// System.out.println(i+value);
+
+};
+
+Prior to Java 8 , any variable that’s used inside the anonymous class should be declared final.
+
+### Advantages of Effectively Final:
+• Easy to perform concurrency operations.
+
+• Promotes Functional Programming and demotes the Imperative style programming.
