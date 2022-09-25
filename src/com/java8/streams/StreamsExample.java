@@ -39,9 +39,14 @@ public class StreamsExample {
 
         // Use case is to apply filter to have only those students in map whose grade level is >=3 and gpa>=3.9
         // Filter takes Predicate as Input
+        // peek accepts a consumer and is mainly used in Streams for debugging purpose to see what is going to next
+        // stream function
         Map<String, List<String>> studentMapWithTwoFilters = StudentDatabase.getAllStudents().stream() // Stream<Student>
+                .peek(System.out::println)
                 .filter(PredicateStudentExample.gradeLevelPredicate) // filtered Stream<Student>
+                .peek(student -> System.out.println("Student after 1st filter: " + student))
                 .filter(PredicateStudentExample.gpaPredicate) // filter Stream<Student>
+                .peek(student -> System.out.println("Student after 2nd filter: " + student))
                 .collect(Collectors.toMap(Student::getName, Student::getActivities)); // Map
 
         System.out.println("Student Map using Stream and 2 Filters size: " + studentMapWithTwoFilters.size());

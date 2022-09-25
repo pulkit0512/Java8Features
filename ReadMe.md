@@ -233,10 +233,14 @@ Map<String, List<String>> studentMapWithTwoFilters = StudentDatabase.getAllStude
 .collect(Collectors.toMap(Student::getName, Student::getActivities));
 
 stream() returns a stream of students which will then sequentially one by one goes to the filter method.
-All the students which passes the filter creates a filter stream and then this filter stream is passed to next filter.
+All the students which passes the filter are passed to next filter.
 Again same thing happens, one by one student is passed to next filter and all the students which passes this filter
-will create a filter stream. Each method which is in between stream and collect are called intermediate operations.
+will create a stream and will pass to terminal operation. 
+Each method which is in between stream and collect are called intermediate operations.
 This final stream then goes to collect which is a terminal operation and creates the final Map which is the desired output.
+
+**Stream is passing the elements from the top to the bottom, one by one, 
+and it is updating the filter on the elements one by one.**
 
 The collect method is a one which converts the stream to the final desired output, which we are looking for here.
 
@@ -249,3 +253,7 @@ All the other above stream operations won't happen at all.
 
 **Terminal Operations are the one which starts the whole process. So Streams are lazy no intermediate operation will be 
 invoked until the terminal operation invokes.**
+
+## Collections VS Streams
+![img_1.png](CollectionsVsStreams1.png)
+![img_2.png](CollectionsVsStreams2.png)
