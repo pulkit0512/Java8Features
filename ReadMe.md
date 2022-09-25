@@ -260,3 +260,9 @@ invoked until the terminal operation invokes.**
 
 ### Stream API: map()
 Converts/Transforms one type of stream into another. It is different from Map in collections framework.
+
+### Stream API: flatMap()
+flatMap : Converts(Transforms) one type to another as like map() method.
+
+Used in the context of Stream where each element in the stream represents multiple elements.
+Like: Stream<List>
