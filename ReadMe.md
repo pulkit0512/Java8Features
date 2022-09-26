@@ -266,3 +266,10 @@ flatMap : Converts(Transforms) one type to another as like map() method.
 
 Used in the context of Stream where each element in the stream represents multiple elements.
 Like: Stream<List>
+
+### Stream API – distinct() , count() and sorted()
+distinct – Returns a stream with unique elements
+
+count – Returns a long with the total no of elements in the Stream.
+
+sorted - Sort the elements in the stream
