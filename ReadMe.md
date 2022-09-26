@@ -273,3 +273,8 @@ distinct – Returns a stream with unique elements
 count – Returns a long with the total no of elements in the Stream.
 
 sorted - Sort the elements in the stream
+
+### Stream API – filter()
+filter – filters the elements in the stream.
+
+Input to the filter is a Predicate Functional Interface.
