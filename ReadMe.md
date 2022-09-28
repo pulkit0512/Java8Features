@@ -288,3 +288,7 @@ It takes two parameters as an input.
 
 • Second Parameter – BinaryOperator<T>
 
+### Stream API : Max/Min using reduce()
+• max -> Maximum(largest) element in the stream.
+
+• min -> Minimum(smallest) element in the stream.
