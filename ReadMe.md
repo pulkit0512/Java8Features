@@ -256,6 +256,7 @@ invoked until the terminal operation invokes.**
 
 ## Collections VS Streams
 ![img_1.png](CollectionsVsStreams1.png)
+
 ![img_2.png](CollectionsVsStreams2.png)
 
 ### Stream API: map()
@@ -308,3 +309,33 @@ All these functions takes in a predicate as an input and returns a Boolean as an
 • allMatch() - Returns true if all the element in the stream matches the predicate, otherwise false.
 
 • noneMatch() – Just opposite to allMatch(). Returns true if none of the element in the stream matches the predicate, otherwise false.
+
+### Streams API : findFirst() and findAny()
+Used to find an element in the stream. Both the functions returns the result of type Optional.
+
+• findFirst() – Returns first element in the stream. Once found, rest of the stream is not processed.
+
+• findAny() – Returns the first encountered element in the stream. Once found, rest of the stream is not processed.
+
+**In Parallel streams findFirst and findAny will make a difference.**
+
+**Difference between allMatch/anyMatch/noneMatch and findAny/findFirst is, allMatch/anyMatch/noneMatch returns a boolean
+if particular element is present in stream. Whereas findAny/findFirst returns the element itself.**
+
+## Short Circuiting
+![img_1.png](ShortCircuiting1.png)
+
+![img_1.png](ShortCircuiting2.png)
+
+## Stateful and Stateless Functions
+Does Streams have an internal state?
+
+• Yes
+
+Does all the Stream functions maintain an internal state ?
+
+• No
+
+![img_1.png](StatefulFunctions.png)
+
+![img_1.png](StatelessFunctions.png)
