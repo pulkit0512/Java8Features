@@ -299,3 +299,12 @@ These two function helps to create a sub-stream.
 • limit(n) – limits the “n” numbers of elements to be processed in the stream. Process the first n elements from the stream.
 
 • skip(n) – skips the “n” number of elements from the stream. Skips the first n elements from stream.
+
+### Streams API : anyMatch(), allMatch(), noneMatch()
+All these functions takes in a predicate as an input and returns a Boolean as an output.
+
+• anyMatch()- Returns true if any one of the element matches the predicate, otherwise false.
+
+• allMatch() - Returns true if all the element in the stream matches the predicate, otherwise false.
+
+• noneMatch() – Just opposite to allMatch(). Returns true if none of the element in the stream matches the predicate, otherwise false.
