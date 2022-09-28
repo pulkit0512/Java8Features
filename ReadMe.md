@@ -353,3 +353,24 @@ Example: Stream.iterate(1, x->x*2) // takes two arguments, initial value and fun
 // this will generate infinite stream of 1, 2, 4, 8, ...
 
 Example: Stream.generate(<Supplier>)
+
+## Numeric Streams
+Represents the primitive values in a stream. Three Types: IntStream, LongStream, DoubleStream
+
+### Numeric Stream Ranges:
+#### Int Stream:
+IntStream.range(1,50) -> Returns an IntStream of 49 elements from 1 to 49.
+
+IntStream.rangeClosed(1,50) -> Returns an IntStream of 50 elements from 1 to 50.
+
+#### Long Stream:
+LongStream.range(1,50) -> Returns a LongStream of 49 elements from 1 to 49.
+
+LongStream.rangeClosed(1,50) -> Returns a LongStream of 50 elements from 1 to 50.
+
+#### DoubleStream:
+It does not support the range ()and rangeClosed()
+
+### Numeric Stream – Aggregate Functions
+• sum() • max() • min() • average()
+
