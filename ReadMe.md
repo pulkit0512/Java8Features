@@ -339,3 +339,17 @@ Does all the Stream functions maintain an internal state ?
 ![img_1.png](StatefulFunctions.png)
 
 ![img_1.png](StatelessFunctions.png)
+
+### Streams API – of(), iterate() and generate()
+We can use these methods whenever we need an on demand stream.
+
+Of() -> Creates a stream of certain values passed to this method.
+
+Example: Stream<String> stringStream = Stream.of(“adam”,”dan”,”Julie”);
+
+iterate(), generate() -> Used to create infinite Streams.
+
+Example: Stream.iterate(1, x->x*2) // takes two arguments, initial value and function to perform on the value each time it is called.
+// this will generate infinite stream of 1, 2, 4, 8, ...
+
+Example: Stream.generate(<Supplier>)
