@@ -374,3 +374,22 @@ It does not support the range ()and rangeClosed()
 ### Numeric Stream – Aggregate Functions
 • sum() • max() • min() • average()
 
+### Numeric Streams : Boxing() and UnBoxing()
+Boxing():
+• Converting a primitive type to Wrapper Class type
+
+Example:
+• Converting an int (primitive) to Integer(wrapper).
+
+UnBoxing():
+• Converting a Wrapper Class type to primitive type.
+
+Example:
+• Converting an Integer(wrapper) to int(primitive).
+
+### Numeric Streams – mapToObj(), mapToLong(), mapToDouble()
+• mapToObj –> Convert each element in numeric stream to some Object.
+
+• mapToLong –> Convert a numeric stream to a Long Stream.
+
+• mapToDouble –> Convert a numeric stream to a Double Stream.
