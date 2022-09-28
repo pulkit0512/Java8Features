@@ -278,3 +278,13 @@ sorted - Sort the elements in the stream
 filter – filters the elements in the stream.
 
 Input to the filter is a Predicate Functional Interface.
+
+### Streams API - reduce()
+reduce – This is a terminal operation. Used to reduce the contents of a stream to a single value.
+
+It takes two parameters as an input.
+
+• First parameters – default or initial value
+
+• Second Parameter – BinaryOperator<T>
+
