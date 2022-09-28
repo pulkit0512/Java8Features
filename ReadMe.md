@@ -208,7 +208,7 @@ Prior to Java 8 , any variable that’s used inside the anonymous class should b
 • Streams API can be also used with arrays or any kind of I/O .
 
 ## What is a Stream ?
-• Stream is a sequence of elements which can be created out of a collections such as List or Arrays or any kind of I/O resources and etc.,
+• Stream is a sequence of elements which can be created out of a collections such as List or Arrays or any kind of I/O resources etc.,
 
 List<String> names = Arrays.asList("adam","dan","jenny");
 
@@ -292,3 +292,10 @@ It takes two parameters as an input.
 • max -> Maximum(largest) element in the stream.
 
 • min -> Minimum(smallest) element in the stream.
+
+### Stream API : limit() and skip()
+These two function helps to create a sub-stream.
+
+• limit(n) – limits the “n” numbers of elements to be processed in the stream. Process the first n elements from the stream.
+
+• skip(n) – skips the “n” number of elements from the stream. Skips the first n elements from stream.
