@@ -393,3 +393,38 @@ Example:
 • mapToLong –> Convert a numeric stream to a Long Stream.
 
 • mapToDouble –> Convert a numeric stream to a Double Stream.
+
+## Stream Terminal Operations
+Terminal Operations collects the data for you.
+
+• Terminal Operations starts the whole stream pipeline.
+
+• Terminal Operations:
+
+• forEach()
+
+• min()
+
+• max()
+
+• reduce()
+
+• collect() and etc.
+
+### Terminal Operation – collect()
+• The collect() method takes in an input of type Collector.
+
+• Produces the result as per the input passed to the collect() method.
+
+• Collect method acts as an accumulator, that accumulates the output until streams are exhausted.
+
+#### Terminal Operations – joining()
+• joining() Collector performs the String concatenation on the elements in the stream. It is an input to collect() method.
+
+• joining() has three different overloaded versions.
+
+#### Terminal Operations – counting()
+• counting() Collector returns the total number of elements as a result.
+
+#### Terminal Operation – mapping()
+• mapping() collector applies a transformation function first and then collects the data in a collection (could be any type of collection).
