@@ -1,6 +1,8 @@
 package com.java8.numeric_streams;
 
+import java.util.Comparator;
 import java.util.List;
+import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 import java.util.stream.LongStream;
 
@@ -41,5 +43,12 @@ public class NumericStreamsMapExample {
         System.out.println("Result of mapToLong: " + mapToLong());
 
         System.out.println("Result of mapToDouble: " + mapToDouble());
+
+        List<String> numStrings = IntStream.rangeClosed(1,10)
+                .mapToObj(String::valueOf)
+                .sorted(Comparator.reverseOrder())
+                .collect(Collectors.toList());
+
+        System.out.println(numStrings);
     }
 }

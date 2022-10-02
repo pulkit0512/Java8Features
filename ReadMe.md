@@ -345,7 +345,7 @@ We can use these methods whenever we need an on demand stream.
 
 Of() -> Creates a stream of certain values passed to this method.
 
-Example: Stream<String> stringStream = Stream.of(“adam”,”dan”,”Julie”);
+Example: Stream<String> stringStream = Stream.of("adam","dan","Julie");
 
 iterate(), generate() -> Used to create infinite Streams.
 
