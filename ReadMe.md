@@ -428,3 +428,17 @@ Terminal Operations collects the data for you.
 
 #### Terminal Operation – mapping()
 • mapping() collector applies a transformation function first and then collects the data in a collection (could be any type of collection).
+
+#### Terminal Operations – maxBy(), minBy()
+• Comparator as an input parameter and Optional as an output.
+
+• maxBy(): 
+This collector is used in conjunction with comparator. Returns the max element based on the property passed to the comparator.
+
+• minBy(): 
+This collector is used in conjunction with comparator. Returns the smallest element based on the property passed to the comparator.
+
+#### Terminal Operations – summingInt(), averagingInt()
+• summingInt()/summingLong()/summingDouble() – this collector returns the sum as a result.
+
+• averagingInt()/averagingLong()/averagingDouble() – this collector returns the average as a result.
