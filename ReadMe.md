@@ -442,3 +442,33 @@ This collector is used in conjunction with comparator. Returns the smallest elem
 • summingInt()/summingLong()/summingDouble() – this collector returns the sum as a result.
 
 • averagingInt()/averagingLong()/averagingDouble() – this collector returns the average as a result.
+
+#### Terminal Operations - groupingBy()
+• groupingBy() collector is equivalent to the groupBy() operation in SQL.
+
+• Used to group the elements based on a property.
+
+• The output of the groupingBy() is going to be a Map<K,V>
+
+• There are three different versions of groupingBy().
+
+• groupingBy(classifier)
+
+• groupingBy(classifier,downstream)
+
+• groupingBy(classifier,supplier,downstream)
+
+#### Terminal Operations – partitioningBy()
+• partitioningBy() collector is also a kind of groupingBy().
+
+• partitioningBy() accepts a predicate as an input.
+
+• Return type of the collector is going to be Map<K,V>
+
+• The key of the return type is going to be a Boolean.
+
+• There are two different versions of partitioningBy()
+
+• partitioningBy(predicate)
+
+• partitioningBy(predicate,downstream) // downstream -> could be of any collector
