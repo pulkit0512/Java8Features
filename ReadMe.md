@@ -472,3 +472,17 @@ This collector is used in conjunction with comparator. Returns the smallest elem
 • partitioningBy(predicate)
 
 • partitioningBy(predicate,downstream) // downstream -> could be of any collector
+
+## What is a Parallel Stream ?
+• Splits the source of data in to multiple parts.
+
+• Process them parallelly.
+
+• Combine the result.
+
+### How Parallel Stream works ?
+• Parallel Stream uses the Fork/Join framework that got introduced in Java 7.
+
+How many Threads are created ?
+
+• Number of threads created == number of processors available in the machine.
