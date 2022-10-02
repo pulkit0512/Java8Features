@@ -491,3 +491,40 @@ How many Threads are created ?
 • Introduced as part of Java 8 to represent a Non-Null value
 
 • Avoids Null Pointer Exception and Unnecessary Null Checks.
+
+## Interfaces in Java - Prior Java 8:
+• Define the contract.
+
+• Only allowed to declare the method. Not allowed to implement a method in Interface.
+
+• Implementation is only allowed in the Implementation class.
+
+• Not easy for an interface to evolve. Because of this if we try to declare new methods in interfaces, 
+then the classes that already implements this interface should implement new methods as well. 
+Otherwise, this will lead to competition issues.
+
+• Java8 allows to have method implementation in interfaces itself by static and default methods.
+
+## Default Methods - Java 8
+
+![img_1.png](defaultMethods.png)
+
+**Default methods have a default keyword in the function definition, this helps the interface to register particular 
+function as default function.**
+
+**Since default methods can be overridden, this helps the interface to evolve without any compilation issues.**
+
+## Static Methods – Java 8
+• Similar to default methods.
+
+**• This cannot be overridden by the implementation classes.**
+
+## Abstract Classes vs Interfaces in Java 8
+• Instance variables are not allowed in Interfaces.
+
+• A class can extend only one class but a class can implement multiple interfaces.
+
+### Does this enable Multiple Inheritance in Java?
+• Yes
+
+• This was never possible before Java 8.
