@@ -545,3 +545,27 @@ function as default function.**
 **LocalTime:** Used to represent the time.
 
 **LocalDateTime:** Used to represent the date and time.
+
+
+## Period:
+• Period is a date-based representation of time in Days , Months and Years and is part of the java.time package.
+
+**• Compatible with LocalDate.**
+
+• It represents a Period of Time not just a specific date and time.
+
+Example:
+
+Period period1 = Period.ofDays(10); // represents a Period of 10 days
+
+Period period2 = Period.ofYears(20); // represents a Period of 20 years
+
+**• Mainly used to calculate the difference between the two dates.**
+
+Example:
+
+LocalDate localDate = LocalDate.of(2018,01,01);
+
+LocalDate localDate1 = LocalDate.of(2018,01,31);
+
+Period period = Period.between(localDate,localDate1); // calculates the difference between the two dates
