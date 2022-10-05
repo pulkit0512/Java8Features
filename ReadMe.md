@@ -569,3 +569,26 @@ LocalDate localDate = LocalDate.of(2018,01,01);
 LocalDate localDate1 = LocalDate.of(2018,01,31);
 
 Period period = Period.between(localDate,localDate1); // calculates the difference between the two dates
+
+## Duration
+• A time based representation of time in hours, minutes, seconds and nanoseconds.
+
+**• Compatible with LocalTime and LocalDateTime**
+
+• It represents a duration of time not just a specific time.
+
+Example:
+
+Duration duration1 = Duration.ofHours(3); // represents the duration of 3 hours
+
+Duration duration1 = Duration. ofMinutes(3); // represents the duration of 3 minutes
+
+**• It can be used to calculate the difference between the time objects such as LocalTime and LocalDateTime.**
+
+Example:
+
+LocalTime localTime = LocalTime.of(7,20);
+
+LocalTime localTime1 = LocalTime.of(8,20);
+
+Duration duration = Duration.between(localTime,localTime1);
