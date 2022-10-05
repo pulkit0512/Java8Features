@@ -601,3 +601,17 @@ Example:
 Instant ins = Instant.now();
 
 Represents the time in seconds from January 01, 1970(EPOCH) to current time as a huge number.
+
+## Time Zones
+• ZonedDateTime, ZoneID, ZoneOffset
+
+• ZonedDateTime - Represents the date/time with its time zone.
+
+Example:
+
+2018-07-18T08:04:14.541-05:00[America/Chicago]
+
+ZoneOffset-> -05:00, represents offset time from UTC time.
+
+ZoneId -> America/Chicago, unique identifier to identify the zone time belongs to.
+
