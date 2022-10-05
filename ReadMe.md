@@ -615,3 +615,16 @@ ZoneOffset-> -05:00, represents offset time from UTC time.
 
 ZoneId -> America/Chicago, unique identifier to identify the zone time belongs to.
 
+## DateTimeFormatter
+- Introduced in Java 8 and part of the java.time.format package. 
+- Used to parse and format the LocalDate, LocalTime and LocalDateTime.
+- Uses certain types of predefined formatters. Check the java documentation to see which formatter suits the use-case.
+- https://docs.oracle.com/javase/8/docs/api/java/time/format/DateTimeFormatter.html
+
+### Parse and Format
+- parse - Converting a String to a LocalDate/LocalTime/LocalDateTime. 
+- format - Converting a LocalDate/LocalTime/LocalDateTime to a String.
+
+![img_1.png](namingPatternsForFormatters.png)
+
+![img_1.png](predefinedFormatters.png)
