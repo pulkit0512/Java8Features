@@ -592,3 +592,12 @@ LocalTime localTime = LocalTime.of(7,20);
 LocalTime localTime1 = LocalTime.of(8,20);
 
 Duration duration = Duration.between(localTime,localTime1);
+
+## Instant:
+Represent the time in a machine-readable format.
+
+Example:
+
+Instant ins = Instant.now();
+
+Represents the time in seconds from January 01, 1970(EPOCH) to current time as a huge number.
