@@ -6,7 +6,9 @@ import com.java8.data.StudentDatabase;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.function.DoubleFunction;
 import java.util.function.Function;
+import java.util.function.Predicate;
 
 public class FunctionStudentExample {
 
@@ -15,6 +17,12 @@ public class FunctionStudentExample {
             students.forEach(student -> studentMap.put(student.getName(), student.getGpa()));
             return studentMap;
     });
+
+    // This function takes an Integer input and returns a Predicate
+    // "toCompare" is the input to Function, followed by "number" which is input to predicate,
+    // and it compares "number" to "toCompare".
+    static Function<Integer, Predicate<Integer>> gradePredicate = toCompare -> number -> number>toCompare;
+    static DoubleFunction<Predicate<Double>> gpaPredicate = toCompare -> number -> number>toCompare;
 
     // New Requirement to add some conditions to the logic.
     // We can use existing predicate, here we need only those students now whose grade level >=3
@@ -32,6 +40,11 @@ public class FunctionStudentExample {
 
     public static void main(String[] args) {
         List<Student> studentList = StudentDatabase.getAllStudents();
+
+        boolean gradeResult = gradePredicate.apply(2).test(5);
+        boolean gpaResult = gpaPredicate.apply(3.5).test(3.9);
+
+        System.out.println("Result is: " + (gradeResult && gpaResult));
 
         System.out.println("Student Function Result: " + studentFunction.apply(studentList));
 
